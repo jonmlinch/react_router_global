@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Post from './App';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const post = {
@@ -12,10 +12,7 @@ const post = {
 	
 }
 
-ReactDOM.render(<Post 
+ReactDOM.render(<App 
 	title={post.title}
-	author={post.author}
-	body={post.body}
-	comments={post.comments}
 	/>, document.getElementById('root'));
 registerServiceWorker();
