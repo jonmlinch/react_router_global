@@ -7,6 +7,14 @@ import Main from './Main';
 import Food from './Food';
 import Movie from './Movie';
 
+const post = {
+  title: "Dinosaurs Are Awesome",
+  author: "Stealthy Stegasaurus",
+  body: "Check out this hot body!",
+  comments: ["First", "Great Post!", "Love the bod!"]
+  
+}
+
 class App extends Component {
   render() {
     return (
@@ -23,7 +31,12 @@ class App extends Component {
 
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/main" component={Main} />
+            <Route path="/main" component={
+              () => (<Main  title={post.title}
+                            author={post.author}
+                            body={post.body}
+                            comments={post.comments} />
+            )} />
             <Route path="/food" component={Food} />
             <Route path="/movie" component={Movie} />
           </div>

@@ -5,7 +5,8 @@ class Main extends Component {
   render() {
     return (
       <div className="App">
-        <h1>This will be the blog page!</h1>
+        <h1>{this.props.title}</h1>
+        <p>{this.props.author}</p>
 
       </div>
     );
