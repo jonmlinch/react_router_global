@@ -13,7 +13,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-            <nav>
+            <nav className="navbar">
               <Link to="/" className="link">Home</Link>
               <Link to="/about" className="link">About Me</Link>
               <Link to="/main" className="link">Main Blog</Link>
